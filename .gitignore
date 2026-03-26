@@ -39,3 +39,18 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# eas
+.easignore
+
+# landing page & backend
+landing-page/
+musicApi/
+
+# test scripts
+api.txt
+test-*.mjs
+test-*.js
+fix_home.py
+strip_animations.py
+service.js

@@ -5,7 +5,11 @@
 
 ---
 
-![Groovli Banner](assets/image.png)
+<div align="center">
+  <img src="assets/groovli1.png" width="200" />
+  <img src="assets/groovli2.png" width="200" />
+  <img src="assets/groovli3.png" width="200" />
+</div>
 
 ## 🚀 Experience Music Reimagined
 Groovli is more than just a music player—it's a high-performance audio engine designed for modern listeners. Focused on minimalist aesthetics and zero-interruptions, Groovli gives you direct access to millions of tracks worldwide with instant response times.

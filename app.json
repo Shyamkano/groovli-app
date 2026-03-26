@@ -2,6 +2,7 @@
   "expo": {
     "name": "Groovli",
     "slug": "groovli",
+    "description": " Groovli: A high-performance, premium music streaming application built with React Native & Expo. Featuring a minimalist Cherry-themed UI and seamless JioSaavn API integration.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/image.png",

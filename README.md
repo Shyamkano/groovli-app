@@ -1,7 +1,7 @@
 # 🍒 GROOVLI
 
-**Premium High-Performance Music Player for Android**
-*Built with React Native & Expo*
+**The Premium High-Performance Music Experience for Android**
+*Meticulously crafted with React Native, Expo, and a passion for minimalist design.*
 
 ---
 

@@ -25,11 +25,8 @@ import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import { COLORS } from './src/data/mockData';
-import { UIManager, Platform } from 'react-native';
-
-if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
-  UIManager.setLayoutAnimationEnabledExperimental(true);
-}
+import { registerForPushNotificationsAsync } from './src/services/notifications';
+// setLayoutAnimationEnabledExperimental removed — no-op in New Architecture
 
 // Keep splash visible while loading fonts
 SplashScreenExpo.preventAutoHideAsync();
@@ -50,6 +47,11 @@ export default function App() {
       SplashScreenExpo.hideAsync();
     }
   }, [fontsLoaded, fontError]);
+
+  // Register push tokens
+  useEffect(() => {
+    registerForPushNotificationsAsync();
+  }, []);
 
   if (!fontsLoaded && !fontError) {
     return (

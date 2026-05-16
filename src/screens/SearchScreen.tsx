@@ -137,9 +137,9 @@ const SearchScreen: React.FC = () => {
     
     const handlePlayFromResult = async () => {
       const track = buildTrack(item, index);
-      // Only play this one song and let discovery handle the rest, 
-      // preventing the search-result-only queue.
-      await playTrack(track, []); 
+      // Pass the entire search results as the new queue
+      const searchQueue = results.map((s, i) => buildTrack(s, i));
+      await playTrack(track, searchQueue); 
     };
 
     return (

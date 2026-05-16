@@ -24,8 +24,12 @@
       "package": "com.groovli.app",
       "permissions": [
         "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
         "WAKE_LOCK",
-        "POST_NOTIFICATIONS"
+        "POST_NOTIFICATIONS",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "RECEIVE_BOOT_COMPLETED"
       ]
     },
     "web": {
@@ -33,20 +37,28 @@
     },
     "plugins": [
       "expo-font",
+      "expo-audio",
       [
-        "expo-av",
+        "expo-notifications",
         {
-          "playbackControls": true
+          "icon": "./assets/image.png",
+          "color": "#FF006B",
+          "sounds": []
         }
       ],
       [
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 24
           }
         }
-      ]
+      ],
+      "./plugins/withAndroidMediaSession",
+      "expo-audio"
     ],
     "extra": {
       "eas": {
